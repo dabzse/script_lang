@@ -1,7 +1,4 @@
-html, body, div, h1, h2, h3, h4, h5, h6,
-p, img, i, ol, ul, li,
-caption, article, details, nav, section, summary
-{ 
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, i, ol, ul, li, caption, article, details, section, summary { 
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -10,36 +7,19 @@ caption, article, details, nav, section, summary
     vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, section
-{
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, section {
     display: block;
 }
 
-html, body 
-{
+html, body {
     background: #181818;
-    font-family: freesans, helvetica, arial, sans-serif;
+    font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: #222;
 }
 
 .clear {
     clear: both;
-}
-
-nav {
-    background-color: #333;
-    margin: 0;
-    overflow: hidden;
-}
-
-nav a {
-    color: #f00;
-    background-color: #006eff;
-    display: block;
-    line-height: 2em;
-    padding: 0.5em 0.5em;
-    text-decoration: none;
 }
 
 p {
@@ -56,9 +36,9 @@ p {
     margin: 30px auto;
 }
 
-.mainDetails {
+.main_details {
     padding: 25px 35px;
-    border-bottom: 2px solid #031648;
+    border-bottom: 2px solid #1c40e0;
     background: #ededed;
 }
 
@@ -81,7 +61,8 @@ h3 {
     font-size: 1.65em;
     font-style: italic;
 }
-#mainArea {
+
+#area_main {
     padding: 0 40px;
 }
 
@@ -102,23 +83,22 @@ h3 {
     float: left;
 }
 
-#contactDetails {
+#contact_details {
     float: right;
 }
 
-#contactDetails ul {
+#contact_details ul {
     list-style-type: none;
     font-size: 0.9em;
     margin-top: 2px;
 }
 
-#contactDetails ul li {
+#contact_details ul li {
     margin-bottom: 3px;
     color: #444;
 }
 
-#contactDetails ul li a,
-a[href^=tel] {
+#contact_details ul li a, a[href^=tel] {
     color: #444;
     text-decoration: none;
     -webkit-transition: all .3s ease-in;
@@ -128,7 +108,7 @@ a[href^=tel] {
     transition: all .3s ease-in;
 }
 
-#contactDetails ul li a:hover {
+#contact_details ul li a:hover {
     color: #031648;
 }
 
@@ -145,36 +125,36 @@ section:last-child {
     padding: 20px 0 10px;
 }
 
-.sectionTitle {
+.section_title {
     float: left;
     width: 25%;
 }
 
-.sectionContent {
+.section_content {
     float: right;
     width: 72.5%;
 }
 
-.sectionTitle h1 {
+.section_title h1 {
     font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 1.5em;
     color: #031648;
 }
 
-.sectionContent h2 {
+.section_content h2 {
     font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-size: 1.5em;
     margin-bottom: -2px;
 }
 
-.subDetails {
+.sub_details {
     font-size: 0.97em;
     font-style: italic;
     margin: 1px 0 3px 20px;
 }
 
-.keySkills {
+.key_skills {
     list-style-type: circle;
     -moz-column-count: 3;
     -webkit-column-count: 3;
@@ -184,7 +164,7 @@ section:last-child {
     color: #444;
 }
 
-.keySkills ul li {
+.key_skills ul li {
     margin-bottom: 3px;
 }
 
@@ -197,16 +177,19 @@ section:last-child {
     text-align: center;
 }
 
+
 @media all and (min-width: 602px) and (max-width: 800px) {
     #headshot {
         display: none;
     }
-    .keySkills {
+
+    .key_skills {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
     }
 }
+
 
 @media all and (max-width: 601px) {
     #cv {
@@ -214,52 +197,60 @@ section:last-child {
         margin: 10px auto;
         min-width: 280px;
     }
+
     #headshot {
         display: none;
     }
-    #name,
-    #contactDetails,
-    {
+    
+    #name, #contact_details {
         float: none;
         width: 100%;
         text-align: center;
     }
-    .sectionTitle,
-    .sectionContent {
+
+    .section_title, .section_content {
         float: none;
         width: 100%;
     }
-    .sectionTitle {
+
+    .section_title {
         margin-left: -2px;
         font-size: 1.25em;
     }
-    .keySkills {
+
+    .key_skills {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
     }
 }
 
+
 @media all and (max-width: 480px) {
-    .mainDetails {
+    .main_details {
         padding: 15px 15px;
     }
+
     section {
         padding: 15px 0 0;
     }
-    #mainArea {
+
+    #area_main {
         padding: 0 25px;
     }
-    .keySkills {
+
+    .key_skills {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
     }
+
     #name h1 {
         line-height: .8em;
         margin-bottom: 4px;
     }
 }
+
 
 @media print {
     #cv {
@@ -267,70 +258,85 @@ section:last-child {
     }
 }
 
+
 @-webkit-keyframes reset {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 
 @-webkit-keyframes fade-in {
     0% {
         opacity: 0;
     }
+
     40% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 
 @-moz-keyframes reset {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 
 @-moz-keyframes fade-in {
     0% {
         opacity: 0;
     }
+
     40% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 
 @keyframes reset {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 
 @keyframes fade-in {
     0% {
         opacity: 0;
     }
+
     40% {
         opacity: 0;
     }
+    
     100% {
         opacity: 1;
     }
 }
 
-.instaFade {
+.fade_main {
     -webkit-animation-name: reset, fade-in;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in;
@@ -342,7 +348,7 @@ section:last-child {
     animation-timing-function: ease-in;
 }
 
-.quickFade {
+.quick_fade {
     -webkit-animation-name: reset, fade-in;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in;
@@ -354,31 +360,31 @@ section:last-child {
     animation-timing-function: ease-in;
 }
 
-.delayOne {
+.delay_one {
     -webkit-animation-delay: 0, .5s;
     -moz-animation-delay: 0, .5s;
     animation-delay: 0, .5s;
 }
 
-.delayTwo {
+.delay_two {
     -webkit-animation-delay: 0, 0.5s;
     -moz-animation-delay: 0, 0.5s;
     animation-delay: 0, 0.5s;
 }
 
-.delayThree {
+.delay_three {
     -webkit-animation-delay: 0, 0.5s;
     -moz-animation-delay: 0, 0.5s;
     animation-delay: 0, 0.5s;
 }
 
-.delayFour {
+.delay_four {
     -webkit-animation-delay: 0, 0.5s;
     -moz-animation-delay: 0, 0.5s;
     animation-delay: 0, 0.5s;
 }
 
-.delayFive {
+.delay_five {
     -webkit-animation-delay: 0, 0.5s;
     -moz-animation-delay: 0, 0.5s;
     animation-delay: 0, 0.5s;
