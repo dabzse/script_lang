@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, h4, h5, h6, p, img, i, ol, ul, li, caption, article, details, section, summary { 
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, i, ol, ul, li, caption, article, details, nav, section, summary {
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -12,14 +12,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, secti
 }
 
 html, body {
-    background: #181818;
-    font-family: FreeSans, Helvetica, Arial, sans-serif;
+    font-family: FreeSans, helvetica, arial, sans-serif;
     font-size: 16px;
     color: #222;
 }
 
 .clear {
     clear: both;
+}
+
+.nav {
+    background-color: #1982e4;
+    margin-bottom: 10px;
+    border-radius: 27px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #eee;
+    background-color: #006eff;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 p {
@@ -34,6 +51,43 @@ p {
     max-width: 800px;
     background: #f3f3f3;
     margin: 30px auto;
+}
+
+#cert {
+    width: 97%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.cert-container {
+    position: relative;
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+}
+
+.cert-container:before, .cert-container:after {
+    content: "";
+    position: absolute;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+    background-image: -webkit-linear-gradient(transparent, #000);
+    background-image: -moz-linear-gradient(transparent, #000);
+    background-image: -o-linear-gradient(transparent, #000);
+    background-image: linear-gradient(transparent, #000);
+    top: -3px;
+    bottom: -3px;
+    width: 3px;
+}
+
+.cert-container:before {
+    left: -3px;
+}
+
+.cert-container:after {
+    right: -3px;
+}
+
+#cert h2 {
+    font-size: 2.3rem;
 }
 
 .main_details {
@@ -62,7 +116,7 @@ h3 {
     font-style: italic;
 }
 
-#area_main {
+#main_area {
     padding: 0 40px;
 }
 
@@ -99,7 +153,7 @@ h3 {
 }
 
 #contact_details ul li a, a[href^=tel] {
-    color: #444;
+    color: #ff0000;
     text-decoration: none;
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -109,7 +163,7 @@ h3 {
 }
 
 #contact_details ul li a:hover {
-    color: #031648;
+    color: #1c40e0;
 }
 
 section {
@@ -133,19 +187,23 @@ section:last-child {
 .section_content {
     float: right;
     width: 72.5%;
+    padding-right: 1.85rem;
+    text-align: justify;
 }
 
 .section_title h1 {
     font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 1.5em;
-    color: #031648;
+    color: #1c40e0;
+    padding-left: .85rem;
 }
 
 .section_content h2 {
     font-family: FreeSans, Helvetica, Arial, sans-serif;
     font-size: 1.5em;
     margin-bottom: -2px;
+    padding-top: 1rem;
 }
 
 .sub_details {
@@ -169,27 +227,22 @@ section:last-child {
 }
 
 #footer {
-    background-color: #e2f7e4;
     float: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 27px;
     width: 100%;
     text-align: center;
 }
-
 
 @media all and (min-width: 602px) and (max-width: 800px) {
     #headshot {
         display: none;
     }
-
     .key_skills {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
     }
 }
-
 
 @media all and (max-width: 601px) {
     #cv {
@@ -197,27 +250,22 @@ section:last-child {
         margin: 10px auto;
         min-width: 280px;
     }
-
     #headshot {
         display: none;
     }
-    
     #name, #contact_details {
         float: none;
         width: 100%;
         text-align: center;
     }
-
     .section_title, .section_content {
         float: none;
         width: 100%;
     }
-
     .section_title {
         margin-left: -2px;
         font-size: 1.25em;
     }
-
     .key_skills {
         -moz-column-count: 2;
         -webkit-column-count: 2;
@@ -225,32 +273,26 @@ section:last-child {
     }
 }
 
-
 @media all and (max-width: 480px) {
     .main_details {
         padding: 15px 15px;
     }
-
     section {
         padding: 15px 0 0;
     }
-
-    #area_main {
+    #main_area {
         padding: 0 25px;
     }
-
     .key_skills {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
     }
-
     #name h1 {
         line-height: .8em;
         margin-bottom: 4px;
     }
 }
-
 
 @media print {
     #cv {
@@ -258,79 +300,64 @@ section:last-child {
     }
 }
 
-
 @-webkit-keyframes reset {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 0;
     }
 }
-
 
 @-webkit-keyframes fade-in {
     0% {
         opacity: 0;
     }
-
     40% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
 }
-
 
 @-moz-keyframes reset {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 0;
     }
 }
-
 
 @-moz-keyframes fade-in {
     0% {
         opacity: 0;
     }
-
     40% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
 }
 
-
 @keyframes reset {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 0;
     }
 }
 
-
 @keyframes fade-in {
     0% {
         opacity: 0;
     }
-
     40% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -338,54 +365,54 @@ section:last-child {
 
 .fade_main {
     -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: ease-in;
     -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 0.5s;
+    -moz-animation-duration: 1.5s;
     -moz-animation-timing-function: ease-in;
     animation-name: reset, fade-in;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in;
 }
 
 .quick_fade {
     -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 2.5s;
     -webkit-animation-timing-function: ease-in;
     -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 0.5s;
+    -moz-animation-duration: 2.5s;
     -moz-animation-timing-function: ease-in;
     animation-name: reset, fade-in;
-    animation-duration: 0.5s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-in;
 }
 
-.delay_one {
+.delayOne {
     -webkit-animation-delay: 0, .5s;
     -moz-animation-delay: 0, .5s;
     animation-delay: 0, .5s;
 }
 
 .delay_two {
-    -webkit-animation-delay: 0, 0.5s;
-    -moz-animation-delay: 0, 0.5s;
-    animation-delay: 0, 0.5s;
+    -webkit-animation-delay: 0, 1s;
+    -moz-animation-delay: 0, 1s;
+    animation-delay: 0, 1s;
 }
 
 .delay_three {
-    -webkit-animation-delay: 0, 0.5s;
-    -moz-animation-delay: 0, 0.5s;
-    animation-delay: 0, 0.5s;
+    -webkit-animation-delay: 0, 1.5s;
+    -moz-animation-delay: 0, 1.5s;
+    animation-delay: 0, 1.5s;
 }
 
 .delay_four {
-    -webkit-animation-delay: 0, 0.5s;
-    -moz-animation-delay: 0, 0.5s;
-    animation-delay: 0, 0.5s;
+    -webkit-animation-delay: 0, 2s;
+    -moz-animation-delay: 0, 2s;
+    animation-delay: 0, 2s;
 }
 
 .delay_five {
-    -webkit-animation-delay: 0, 0.5s;
-    -moz-animation-delay: 0, 0.5s;
-    animation-delay: 0, 0.5s;
+    -webkit-animation-delay: 0, 2.5s;
+    -moz-animation-delay: 0, 2.5s;
+    animation-delay: 0, 2.5s;
 }

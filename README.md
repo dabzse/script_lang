@@ -42,6 +42,7 @@ Maybe I will upload some modifications later....
 
 ### Initial release: Django 3.2.9
 ### Updated release: Django 3.2.12
+### Updated release: Django 3.2.13 (latest at the moment in the version 3, LTS)
 
 ---
 
