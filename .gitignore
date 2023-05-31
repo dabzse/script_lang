@@ -1,5 +1,2 @@
-.vscode
 CV-env
-CV__HU_django/__pycache__
-resume/__pycache__
-resume/migrations/__pycache__
+__pycache__
