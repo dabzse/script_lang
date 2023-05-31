@@ -10,7 +10,7 @@ This version is still very static. I made some changes in the other, but it is n
 
 Maybe I will upload some modifications later....
 
-[no longer available online, because salesforce killed heroku's free tier](https://#)
+[no longer available online, because salesforce killed heroku&#39;s free tier](https://#)
 
 ---
 
@@ -45,6 +45,8 @@ Maybe I will upload some modifications later....
 #### Initial release: Django 3.2.9
 
 #### Updated release: Django 3.2.12
+
+#### Updated release: Django 3.2.13
 
 #### Updated release: Django 3.2.19 (latest version at the moment in django3, LTS)
 
